@@ -43,9 +43,15 @@ const getTeams = async (token) => {
   return await tryCatchFetch(url, getInit(token));
 };
 
+const getTeamById = async (teamId, token) => {
+  let url = `${BASE_URL}api/teams/${teamId}/`;
+  return await tryCatchFetch(url, getInit(token));
+};
+
 const myExports = {
   doLogin,
   getTeams,
+  getTeamById,
 };
 
 export default myExports;

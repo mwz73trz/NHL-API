@@ -6,5 +6,8 @@ def get_teams(request):
     response = requests.get(f"https://statsapi.web.nhl.com/api/v1/teams").json()
     return JsonResponse(response, safe=False)
 
+def team_detail(request, teamId):
+    response = requests.get(f"https://statsapi.web.nhl.com/api/v1/teams/{teamId}").json()
+    return JsonResponse(response, safe=False)
 
 

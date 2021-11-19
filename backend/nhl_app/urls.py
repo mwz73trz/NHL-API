@@ -3,4 +3,5 @@ from nhl_app import views
 
 urlpatterns = [
     path('teams/', views.get_teams, name='get_teams'),
+    path('teams/<int:teamId>/', views.team_detail, name='team_detail'),
 ]
