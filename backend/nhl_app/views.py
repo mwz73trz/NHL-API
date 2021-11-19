@@ -20,3 +20,8 @@ def player_detail(request, playerId):
     player = response['people']
     return JsonResponse(player, safe=False)
 
+def player_stats(request, playerId):
+    response = requests.get(f"https://statsapi.web.nhl.com/api/v1/people/{playerId}/stats?stats=statsSingleSeason&season=20212022").json()
+    all_stats = response['stats'][0]['splits'][0]['stat']
+    return JsonResponse(all_stats, safe=False)
+

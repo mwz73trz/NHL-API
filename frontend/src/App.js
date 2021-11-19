@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import TeamDetailPage from "./pages/TeamDetailPage";
 import TeamPlayersPage from "./pages/TeamPlayersPage";
 import PlayerDetailPage from "./pages/PlayerDetailPage";
+import PlayerStatsPage from "./pages/PlalyerStatsPage";
 import UserContext from "./contexts/UserContext";
 
 class App extends Component {
@@ -39,6 +40,11 @@ class App extends Component {
                 path="/players/:playerId"
                 exact
                 component={PlayerDetailPage}
+              />
+              <Route
+                path="/players/:playerId/stats"
+                exact
+                component={PlayerStatsPage}
               />
             </div>
           </UserContext.Provider>

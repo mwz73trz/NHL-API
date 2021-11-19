@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardBody, CardText, CardTitle } from "reactstrap";
 
 class PlayerDetail extends Component {
@@ -31,6 +32,9 @@ class PlayerDetail extends Component {
           <CardText>
             Position: {this.props.player[0].primaryPosition.name}
           </CardText>
+          <Link to={`/players/${this.props.player[0].id}/stats`}>
+            Player Stats
+          </Link>
         </CardBody>
       </Card>
     );

@@ -13,7 +13,6 @@ class PlayerDetailPage extends Component {
       let playerId = this.props.match.params.playerId;
       let token = this.context ? this.context.token : null;
       let playerData = await nhlAPI.getPlayerById(playerId, token);
-      console.log(playerData);
       if (playerData) {
         this.setState({ player: playerData });
       }
