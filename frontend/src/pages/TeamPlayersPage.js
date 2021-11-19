@@ -33,16 +33,16 @@ class TeamPlayersPage extends Component {
         </li>
       );
     });
-    return <ul style={{ listStyle: "none" }}>{playerElements}</ul>;
+    return (
+      <ul style={{ listStyle: "none" }}>
+        <h1>Roster</h1>
+        {playerElements}
+      </ul>
+    );
   }
 
   render() {
-    return (
-      <div>
-        <h1>Roster</h1>
-        {this.renderPlayers()}
-      </div>
-    );
+    return <div>{this.renderPlayers()}</div>;
   }
 }
 

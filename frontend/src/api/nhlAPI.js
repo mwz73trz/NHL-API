@@ -53,11 +53,17 @@ const getTeamPlayers = async (teamId, token) => {
   return await tryCatchFetch(url, getInit(token));
 };
 
+const getPlayerById = async (playerId, token) => {
+  let url = `${BASE_URL}api/players/${playerId}/`;
+  return await tryCatchFetch(url, getInit(token));
+};
+
 const myExports = {
   doLogin,
   getTeams,
   getTeamById,
   getTeamPlayers,
+  getPlayerById,
 };
 
 export default myExports;

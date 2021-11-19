@@ -15,3 +15,8 @@ def team_players(request, teamId):
     roster = response['teams'][0]['roster']['roster']
     return JsonResponse(roster, safe=False)
 
+def player_detail(request, playerId):
+    response = requests.get(f"https://statsapi.web.nhl.com/api/v1/people/{playerId}").json()
+    player = response['people']
+    return JsonResponse(player, safe=False)
+

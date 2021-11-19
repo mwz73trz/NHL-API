@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import TeamDetailPage from "./pages/TeamDetailPage";
 import TeamPlayersPage from "./pages/TeamPlayersPage";
+import PlayerDetailPage from "./pages/PlayerDetailPage";
 import UserContext from "./contexts/UserContext";
 
 class App extends Component {
@@ -33,6 +34,11 @@ class App extends Component {
                 path="/teams/:teamId/players"
                 exact
                 component={TeamPlayersPage}
+              />
+              <Route
+                path="/players/:playerId"
+                exact
+                component={PlayerDetailPage}
               />
             </div>
           </UserContext.Provider>
