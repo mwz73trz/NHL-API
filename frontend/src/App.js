@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import TeamDetailPage from "./pages/TeamDetailPage";
+import TeamPlayersPage from "./pages/TeamPlayersPage";
 import UserContext from "./contexts/UserContext";
 
 class App extends Component {
@@ -28,6 +29,11 @@ class App extends Component {
               <Route path="/" exact component={HomePage} />
               <Route path="/login" exact render={this.renderLoginPage} />
               <Route path="/teams/:teamId" exact component={TeamDetailPage} />
+              <Route
+                path="/teams/:teamId/players"
+                exact
+                component={TeamPlayersPage}
+              />
             </div>
           </UserContext.Provider>
         </Router>
